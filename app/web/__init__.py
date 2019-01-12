@@ -1,0 +1,9 @@
+#!/usr/bin/python
+#coding: utf8
+
+
+from flask import Blueprint
+
+web = Blueprint('web',__name__)
+
+from app.web import book
