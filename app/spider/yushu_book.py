@@ -4,7 +4,7 @@
 from app.libs.http import HTTP
 from flask import current_app
 
-class YuShuBook:
+class YuShuBook(object):
     isbn_url = 'http://t.yushu.im/v2/book/isbn/{}'
     keyword_url = 'http://t.yushu.im/v2/book/search?q={}&count={}&start={}'
 
