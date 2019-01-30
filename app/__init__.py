@@ -1,7 +1,8 @@
 #!/usr/bin/python
-#coding: utf8
+# coding: utf8
 
 from flask import Flask
+
 
 def create_app():
     app = Flask(__name__)
@@ -9,6 +10,7 @@ def create_app():
     app.config.from_object('app.setting')
     register_blueprint(app)
     return app
+
 
 def register_blueprint(app):
     from app.web import web
