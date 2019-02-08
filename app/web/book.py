@@ -4,7 +4,7 @@
 import json
 import sys
 
-from flask import jsonify, request, render_template
+from flask import jsonify, request, render_template, flash
 from . import web
 from app.libs.helper import is_isbn_or_key
 from app.spider.yushu_book import YuShuBook
@@ -37,6 +37,15 @@ def index():
         # return jsonify(books)
 
     return jsonify(form.errors)
+    # else:
+    #     flash('搜索的关键字不符合要求，请重新输入')
+
+    # return render_template('search_result.html', books=books)
+
+
+@web.route('/book/<isdn>/detail')
+def book_detail(isdn):
+    pass
 
 
 @web.route('/test/')
@@ -45,4 +54,6 @@ def test():
         'name': 'zxg',
         'age': 18
     }
+    flash('hello,zxg', category='test1')
+    flash('hello world')
     return render_template('test.html',data=data)

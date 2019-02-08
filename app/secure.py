@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#conding: utf8
+# coding: utf8
 
 DEBUG = True
-
+SECRET_KEY = 'A34BRTG3432g'
